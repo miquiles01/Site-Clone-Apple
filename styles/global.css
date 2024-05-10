@@ -4,6 +4,7 @@
     --tittle-primary-color: #f5f5f7;
     --subtittle-color: #6e6e73;
     --action-color: #2997FF;
+    --spirited-main-color: #DED2B9;
 }
 header{
     background-color: var(--bg-primary);
@@ -33,31 +34,40 @@ header nav ul li{
 }
 main section{
     text-align: center;
+    position: relative;
 }
-main section h1{
+main section img{
+    width: 100%;
+    height: auto;
+}
+main .main-section h1{
     color: var(--tittle-primary-color);
     font-size: 3rem;
     font-weight: bold;
     line-height: 4rem;
     letter-spacing: 0.28px;
 }
-main section .sub{
+main .main-section .sub{
     font-size: 0.9rem;
 }
-main section h2{
+main .main-section h2{
     color: var(--subtittle-color);
     font-size: 1.5rem;
     font-weight: normal;
     line-height: 2rem;
     letter-spacing: 0.11px;
 }
-main section a{
+main .main-section a{
     color: var(--action-color);
     line-height: 1.8rem;
     font-size: 1.2rem;
     text-decoration: none;
 }
-main section .text-wrapper{
+main .main-section a:hover{
+    text-decoration: underline;
+
+}
+main .main-section .text-wrapper{
     position: absolute;
     left: 50%;
     transform: translate(-50%);
@@ -66,7 +76,42 @@ main section .text-wrapper{
     align-items: center;
     margin-top: 51px;
 }
-main section img{
+
+main .spirited-section > div {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+main .spirited-section > div:last-child {
+    bottom: 50px;
+}
+
+main .spirited-section > div:first-child {
+    top: 105px;
+    display: flex;
+    justify-content: space-between;
     width: 100%;
-    height: auto;
+    max-width: 60%;
+}
+
+main .spirited-section > div:first-child p {
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 2.5rem;
+    color: var(--spirited-main-color);
+    letter-spacing: -0.6px;
+}
+main .spirited-section p{
+    color: var(--tittle-primary-color);
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    letter-spacing: 0.11px;
+}
+main .spirited-section span{
+    color: var(--text-ligth);
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    display: block;
+    letter-spacing: 0.23px;
 }
